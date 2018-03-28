@@ -1,0 +1,15 @@
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\bin\Release\BankReconciliations.exe.config
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\bin\Release\BankReconciliations.exe.manifest
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\bin\Release\BankReconciliations.application
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\bin\Release\BankReconciliations.exe
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\bin\Release\BankReconciliations.pdb
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Release\BankReconciliations.Form1.resources
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Release\BankReconciliations.Properties.Resources.resources
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Release\BankReconciliations.csproj.GenerateResource.Cache
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Release\BankReconciliations.exe.manifest
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Release\BankReconciliations.application
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Release\BankReconciliations.exe
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Release\BankReconciliations.pdb
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Release\BankReconciliations.csprojResolveAssemblyReference.cache
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Release\RdlCompile.cache
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Release\RdlCompile.compiled

@@ -1,0 +1,83 @@
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.exe.config
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.exe
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.pdb
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.csprojResolveAssemblyReference.cache
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.Form1.resources
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.Properties.Resources.resources
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.csproj.GenerateResource.Cache
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.exe
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.pdb
+C:\Users\lordvader\OneDrive\Projects\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.exe.config
+C:\Users\lordvader\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.exe
+C:\Users\lordvader\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.pdb
+C:\Users\lordvader\OneDrive\Projects\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.exe
+C:\Users\lordvader\OneDrive\Projects\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.pdb
+C:\Users\lordvader\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.csprojResolveAssemblyReference.cache
+C:\Users\lordvader\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.Form1.resources
+C:\Users\lordvader\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.Properties.Resources.resources
+C:\Users\lordvader\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.csproj.GenerateResource.Cache
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.exe.manifest
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.application
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.exe.manifest
+C:\SkyDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.application
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.exe.config
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.exe
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.pdb
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.exe.manifest
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.application
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.exe
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.pdb
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.csprojResolveAssemblyReference.cache
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.BankRecProcessed.resources
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.BankStatementForm.resources
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.ChooseBank.resources
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.Form1.resources
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.Properties.Resources.resources
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.restoreArchivedTable.resources
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.Worksheet.resources
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.csproj.GenerateResource.Cache
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.exe.manifest
+D:\OneDrive\Projects\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.application
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.exe.config
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.exe
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.pdb
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.exe.manifest
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.application
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.exe
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.pdb
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.csprojResolveAssemblyReference.cache
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.BankRecProcessed.resources
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.BankStatementForm.resources
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.ChooseBank.resources
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.Form1.resources
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.Properties.Resources.resources
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.restoreArchivedTable.resources
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.Worksheet.resources
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.csproj.GenerateResource.Cache
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\RdlCompile.cache
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\RdlCompile.compiled
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.exe.manifest
+\\diskstation\development\Projects\Project Backups\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.application
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.exe.config
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.exe
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.pdb
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.exe.manifest
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.application
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.exe
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\bin\Debug\BankReconciliations.pdb
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.csprojResolveAssemblyReference.cache
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.BankRecProcessed.resources
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.BankStatementForm.resources
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.ChooseBank.resources
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.Form1.resources
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.Properties.Resources.resources
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.restoreArchivedTable.resources
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.Worksheet.resources
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.csproj.GenerateResource.Cache
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\RdlCompile.cache
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\RdlCompile.compiled
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.exe.manifest
+\\diskstation\development\Projects\Rod's Source Code\BankReconciliations\BankReconciliations\obj\Debug\BankReconciliations.application
+D:\Repos\bankrec\GSW_BankRec\BankReconciliations\bin\Debug\BankReconciliations.exe.config
+D:\Repos\bankrec\GSW_BankRec\BankReconciliations\obj\Debug\BankReconciliations.exe
+D:\Repos\bankrec\GSW_BankRec\BankReconciliations\obj\Debug\BankReconciliations.pdb

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5CFBC65F-575B-4E6B-A0D2-36D099A4606F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BankReconciliations</RootNamespace>
+    <AssemblyName>BankReconciliations</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>\\diskstation\excalibur\BankRec\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ProductName>Bank Reconciliation Program</ProductName>
+    <PublisherName>General Steel Warehouse</PublisherName>
+    <SuiteName>Excallibur</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>45</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A26827D55DBA95353A9C0F40D8E2BE831F22C78C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Excalibur Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BankRecProcessed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankRecProcessed.Designer.cs">
+      <DependentUpon>BankRecProcessed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BankStatementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankStatementForm.Designer.cs">
+      <DependentUpon>BankStatementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseBank.Designer.cs">
+      <DependentUpon>ChooseBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsBankRecords.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBankRecords.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsBankRecProcessed.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBankRecProcessed.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsBankStatements.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBankStatements.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExcaliburDataSet.cs">
+      <DependentUpon>ExcaliburDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExcaliburDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExcaliburDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExcaliburDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExcaliburDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExcaliburDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExcaliburDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="restoreArchivedTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="restoreArchivedTable.Designer.cs">
+      <DependentUpon>restoreArchivedTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Worksheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Worksheet.Designer.cs">
+      <DependentUpon>Worksheet.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BankRecProcessed.resx">
+      <DependentUpon>BankRecProcessed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankStatementForm.resx">
+      <DependentUpon>BankStatementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseBank.resx">
+      <DependentUpon>ChooseBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report-BankRecProcessed.rdlc" />
+    <EmbeddedResource Include="restoreArchivedTable.resx">
+      <DependentUpon>restoreArchivedTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Worksheet.rdlc" />
+    <EmbeddedResource Include="Worksheet.resx">
+      <DependentUpon>Worksheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dsBankRecords.xsc">
+      <DependentUpon>dsBankRecords.xsd</DependentUpon>
+    </None>
+    <None Include="dsBankRecords.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBankRecords.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsBankRecords.xss">
+      <DependentUpon>dsBankRecords.xsd</DependentUpon>
+    </None>
+    <None Include="dsBankRecProcessed.xsc">
+      <DependentUpon>dsBankRecProcessed.xsd</DependentUpon>
+    </None>
+    <None Include="dsBankRecProcessed.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBankRecProcessed.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsBankRecProcessed.xss">
+      <DependentUpon>dsBankRecProcessed.xsd</DependentUpon>
+    </None>
+    <None Include="dsBankStatements.xsc">
+      <DependentUpon>dsBankStatements.xsd</DependentUpon>
+    </None>
+    <None Include="dsBankStatements.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBankStatements.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsBankStatements.xss">
+      <DependentUpon>dsBankStatements.xsd</DependentUpon>
+    </None>
+    <None Include="ExcaliburDataSet.xsc">
+      <DependentUpon>ExcaliburDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ExcaliburDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ExcaliburDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ExcaliburDataSet.xss">
+      <DependentUpon>ExcaliburDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ExcaliburDataSet1.xsc">
+      <DependentUpon>ExcaliburDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ExcaliburDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ExcaliburDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ExcaliburDataSet1.xss">
+      <DependentUpon>ExcaliburDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ExcaliburDataSet2.xsc">
+      <DependentUpon>ExcaliburDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ExcaliburDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ExcaliburDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ExcaliburDataSet2.xss">
+      <DependentUpon>ExcaliburDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Excalibur Logo.ico" />
+    <None Include="Resources\HlpIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
