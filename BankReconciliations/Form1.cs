@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using System.IO;
 using Microsoft.Reporting.WinForms;
 using System.Diagnostics;
+using System.Configuration;
 
 namespace BankReconciliations
 {
@@ -478,7 +479,7 @@ namespace BankReconciliations
                 dsBankRecProcessed.Clear();
                 dsBankRecProcessed.EnforceConstraints = false;
                 bankRecTableAdapter1.Fill(dsBankRecProcessed.BankRec);
-                StreamWriter sw = new StreamWriter(@"\\diskstation\versaform\vf\d8a\imp_br.d8a");
+                StreamWriter sw = new StreamWriter($@"{Program.pathRoot}\versaform\vf\d8a\imp_br.d8a");
 
                 for (int x = 0; x < dsBankRecProcessed.BankRec.Rows.Count; x++)
                 {
@@ -605,12 +606,12 @@ namespace BankReconciliations
         {
             if (MessageBox.Show("Are you sure you are ready to import data into SQL for processing?","Please Verify!",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
             {
-                FileInfo fi = new FileInfo(@"\\diskstation\versaform\vf\d8a\bankrec.d8a");
+                FileInfo fi = new FileInfo($@"{Program.pathRoot}\versaform\vf\d8a\bankrec.d8a");
                 DateTime oldestAllowed = DateTime.Now.AddDays(-4);
                 if (fi.Exists && fi.LastWriteTime > oldestAllowed)
                 {
                     MessageBox.Show("Data file found. Ready for processing...");
-                    Process.Start(@"\\diskstation\MSSQL\DTSX\Import BankRec Data Laptop.dtsx");
+                    Process.Start($@"{Program.pathRoot}\MSSQL\DTSX\Import BankRec Data Laptop.dtsx");
                 }
                 else
                 {

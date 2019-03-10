@@ -8,7 +8,7 @@
   DTS:Description="Imports BankRec Data from R:\VF\d8a\bankrec,d8a"
   DTS:DTSID="{AB8BD3E4-FCB6-4A19-B52A-10E34F20CD91}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="12.0.4100.1"
+  DTS:LastModifiedProductVersion="13.0.1601.5"
   DTS:LocaleID="1033"
   DTS:MaxErrorCount="0"
   DTS:ObjectName="Import BankRec Data"
@@ -24,12 +24,7 @@
       DTS:ObjectName="DestinationConnectionOLEDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=64.185.28.222;User ID=excalibur;Initial Catalog=Excalibur;Provider=SQLNCLI11;Auto Translate=false;">
-          <DTS:Password
-            DTS:Name="PWD"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVXfRKx6V30mIDSCv6IY/pwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABxMF+CCaAodqH/nwUuRGg4Eu+j81F7gmeCeYg/k0cZngAAAAAOgAAAAAIAACAAAAC+0iSeqRILG5jYlg33f3BWsZ2woqARHmenHBbhMXGKnyAAAABTLhPsISgO+ZDNeAbEHb8C4aGziutJYcfMWl2xZb0E10AAAADiiXdornOY/8KtUai7oJ2rCwiLqZY+NsShdpnkAOxMTe8Sg+xXiXARrY7pkXqyYX0jO8BCzojv9u7voSfU9kGY</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=64.185.28.222;User ID=excalibur;Initial Catalog=Excalibur;Provider=SQLNCLI11;Auto Translate=false;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -39,12 +34,7 @@
       DTS:ObjectName="GSWDB.Excalibur.excalibur">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=64.185.28.222;User ID=excalibur;Initial Catalog=Excalibur;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Import BankRec Data-{FEAD1D87-83F8-4973-9265-669518BC2A31}GSWDB.Excalibur.excalibur;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVXfRKx6V30mIDSCv6IY/pwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAChuUP2RF5/ochdN9Z4lYi/vfV4xOI93VGFYCqUe8rWyQAAAAAOgAAAAAIAACAAAACyuvCrd1l7QtCxLu5lPBPuhJCa7rBXHN6fuEAxIA0axSAAAAAYjeURv4iEhkUgoKSAwEBQDLaLmQT0QWH67P6QT9cftUAAAABQebWYpyGiu15ZlHfwQyzYc0gYO94qU7oBhcdshONy9Q7DrThb3BXcRfTrWWSZ9T57Jrl6zdK6rbFu7F5NaICg</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=64.185.28.222;User ID=excalibur;Initial Catalog=Excalibur;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Import BankRec Data-{FEAD1D87-83F8-4973-9265-669518BC2A31}GSWDB.Excalibur.excalibur;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -60,7 +50,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\diskstation\versaform\VF\D8A\BANKREC.D8A">
+          DTS:ConnectionString="\\gsw.local\data\versaform\VF\D8A\BANKREC.D8A">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -276,7 +266,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."

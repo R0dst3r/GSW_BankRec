@@ -97,7 +97,7 @@ namespace BankReconciliations
                 tboxEndofMonthDate.Text = cutOffDate;
                 tboxPrevBal.Text = String.Format("{0:$#,##0.00}", bankRec_stmtsTableAdapter.getPrevBalance());
                 decimal endMonthVF = 0.00M;
-                StreamReader sr = new StreamReader(@"\\diskstation\versaform\SQL\BankRec\ENDMONTH.TXT");
+                StreamReader sr = new StreamReader($@"{Program.pathRoot}\versaform\SQL\BankRec\ENDMONTH.TXT");
                 endMonthVF = Decimal.Parse(sr.ReadLine());
                 tboxClearedBalanceVF.Text = String.Format("{0:$#,##0.00}", endMonthVF);
                 tboxCreditsCount.Focus();
@@ -112,7 +112,7 @@ namespace BankReconciliations
             OpenFileDialog ofdLoadStatement = new OpenFileDialog();
             string bankFolder = "";
             if (bankAcct == 1112.02M) { bankFolder = "Centennial Bank"; }
-            ofdLoadStatement.InitialDirectory = @"\\diskstation\accounting\Financial Statements\" + bankFolder + @"\";
+            ofdLoadStatement.InitialDirectory = $@"{Program.pathRoot}\accounting\Financial Statements\{bankFolder}\";
             if (ofdLoadStatement.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 System.Diagnostics.Process.Start(ofdLoadStatement.FileName.ToString());
