@@ -936,7 +936,7 @@ namespace BankReconciliations.ExcaliburDataSetTableAdapters {
             return this.Adapter.Update(dataRows);
         }
         
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual object GetClearedBalanceVF(decimal bankAccount, string EoMDate) {

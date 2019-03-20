@@ -242,7 +242,7 @@
             this.tableStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tableStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
-            this.tableStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
+            this.tableStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
             this.tableStatus.Controls.Add(this.label1, 0, 1);
             this.tableStatus.Controls.Add(this.label2, 0, 2);
             this.tableStatus.Controls.Add(this.lblCreditsVAL, 1, 1);
@@ -311,7 +311,7 @@
             this.lblCreditsVAL.AutoSize = true;
             this.lblCreditsVAL.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreditsVAL.ForeColor = System.Drawing.Color.SkyBlue;
-            this.lblCreditsVAL.Location = new System.Drawing.Point(184, 36);
+            this.lblCreditsVAL.Location = new System.Drawing.Point(183, 36);
             this.lblCreditsVAL.Name = "lblCreditsVAL";
             this.lblCreditsVAL.Size = new System.Drawing.Size(42, 20);
             this.lblCreditsVAL.TabIndex = 1;
@@ -323,7 +323,7 @@
             this.lblDebitsVAL.AutoSize = true;
             this.lblDebitsVAL.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDebitsVAL.ForeColor = System.Drawing.Color.SkyBlue;
-            this.lblDebitsVAL.Location = new System.Drawing.Point(184, 62);
+            this.lblDebitsVAL.Location = new System.Drawing.Point(183, 62);
             this.lblDebitsVAL.Name = "lblDebitsVAL";
             this.lblDebitsVAL.Size = new System.Drawing.Size(42, 20);
             this.lblDebitsVAL.TabIndex = 1;
@@ -335,7 +335,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(233, 36);
+            this.label5.Location = new System.Drawing.Point(232, 36);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(28, 20);
             this.label5.TabIndex = 1;
@@ -347,7 +347,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label6.Location = new System.Drawing.Point(232, 62);
+            this.label6.Location = new System.Drawing.Point(231, 62);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 20);
             this.label6.TabIndex = 1;
@@ -359,7 +359,7 @@
             this.lblCNVAL.AutoSize = true;
             this.lblCNVAL.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCNVAL.ForeColor = System.Drawing.Color.SkyBlue;
-            this.lblCNVAL.Location = new System.Drawing.Point(291, 36);
+            this.lblCNVAL.Location = new System.Drawing.Point(290, 36);
             this.lblCNVAL.Name = "lblCNVAL";
             this.lblCNVAL.Size = new System.Drawing.Size(18, 20);
             this.lblCNVAL.TabIndex = 1;
@@ -371,7 +371,7 @@
             this.lblDNVAL.AutoSize = true;
             this.lblDNVAL.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDNVAL.ForeColor = System.Drawing.Color.SkyBlue;
-            this.lblDNVAL.Location = new System.Drawing.Point(291, 62);
+            this.lblDNVAL.Location = new System.Drawing.Point(290, 62);
             this.lblDNVAL.Name = "lblDNVAL";
             this.lblDNVAL.Size = new System.Drawing.Size(18, 20);
             this.lblDNVAL.TabIndex = 1;
@@ -383,7 +383,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label9.Location = new System.Drawing.Point(339, 36);
+            this.label9.Location = new System.Drawing.Point(338, 36);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 20);
             this.label9.TabIndex = 1;
@@ -395,7 +395,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label10.Location = new System.Drawing.Point(318, 62);
+            this.label10.Location = new System.Drawing.Point(317, 62);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 20);
             this.label10.TabIndex = 1;
@@ -407,7 +407,7 @@
             this.lblOutstandingVAL.AutoSize = true;
             this.lblOutstandingVAL.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOutstandingVAL.ForeColor = System.Drawing.Color.SkyBlue;
-            this.lblOutstandingVAL.Location = new System.Drawing.Point(515, 62);
+            this.lblOutstandingVAL.Location = new System.Drawing.Point(514, 62);
             this.lblOutstandingVAL.Name = "lblOutstandingVAL";
             this.lblOutstandingVAL.Size = new System.Drawing.Size(42, 20);
             this.lblOutstandingVAL.TabIndex = 1;
@@ -419,7 +419,7 @@
             this.lblInTransitVAL.AutoSize = true;
             this.lblInTransitVAL.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInTransitVAL.ForeColor = System.Drawing.Color.SkyBlue;
-            this.lblInTransitVAL.Location = new System.Drawing.Point(515, 36);
+            this.lblInTransitVAL.Location = new System.Drawing.Point(514, 36);
             this.lblInTransitVAL.Name = "lblInTransitVAL";
             this.lblInTransitVAL.Size = new System.Drawing.Size(42, 20);
             this.lblInTransitVAL.TabIndex = 1;
@@ -431,7 +431,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label13.Location = new System.Drawing.Point(570, 36);
+            this.label13.Location = new System.Drawing.Point(569, 36);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(22, 20);
             this.label13.TabIndex = 1;
@@ -443,7 +443,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label14.Location = new System.Drawing.Point(564, 62);
+            this.label14.Location = new System.Drawing.Point(563, 62);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(28, 20);
             this.label14.TabIndex = 1;
@@ -455,7 +455,7 @@
             this.lblITVAL.AutoSize = true;
             this.lblITVAL.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblITVAL.ForeColor = System.Drawing.Color.SkyBlue;
-            this.lblITVAL.Location = new System.Drawing.Point(622, 36);
+            this.lblITVAL.Location = new System.Drawing.Point(621, 36);
             this.lblITVAL.Name = "lblITVAL";
             this.lblITVAL.Size = new System.Drawing.Size(18, 20);
             this.lblITVAL.TabIndex = 1;
@@ -467,7 +467,7 @@
             this.lblOSVAL.AutoSize = true;
             this.lblOSVAL.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOSVAL.ForeColor = System.Drawing.Color.SkyBlue;
-            this.lblOSVAL.Location = new System.Drawing.Point(622, 62);
+            this.lblOSVAL.Location = new System.Drawing.Point(621, 62);
             this.lblOSVAL.Name = "lblOSVAL";
             this.lblOSVAL.Size = new System.Drawing.Size(18, 20);
             this.lblOSVAL.TabIndex = 1;
@@ -479,7 +479,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label17.Location = new System.Drawing.Point(666, 36);
+            this.label17.Location = new System.Drawing.Point(665, 36);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(123, 20);
             this.label17.TabIndex = 1;
@@ -491,7 +491,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label18.Location = new System.Drawing.Point(704, 62);
+            this.label18.Location = new System.Drawing.Point(703, 62);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(85, 20);
             this.label18.TabIndex = 1;
@@ -538,7 +538,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label21.Location = new System.Drawing.Point(646, 5);
+            this.label21.Location = new System.Drawing.Point(645, 5);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(143, 20);
             this.label21.TabIndex = 1;
@@ -566,7 +566,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label3.Location = new System.Drawing.Point(344, 5);
+            this.label3.Location = new System.Drawing.Point(343, 5);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 20);
             this.label3.TabIndex = 1;
@@ -577,7 +577,7 @@
             this.dtpCutOffDate.CustomFormat = "";
             this.dtpCutOffDate.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
             this.dtpCutOffDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpCutOffDate.Location = new System.Drawing.Point(416, 3);
+            this.dtpCutOffDate.Location = new System.Drawing.Point(415, 3);
             this.dtpCutOffDate.Margin = new System.Windows.Forms.Padding(1, 3, 3, 1);
             this.dtpCutOffDate.Name = "dtpCutOffDate";
             this.dtpCutOffDate.Size = new System.Drawing.Size(104, 25);
@@ -597,7 +597,7 @@
             // btnParse
             // 
             this.tableStatus.SetColumnSpan(this.btnParse, 2);
-            this.btnParse.Location = new System.Drawing.Point(563, 3);
+            this.btnParse.Location = new System.Drawing.Point(562, 3);
             this.btnParse.Name = "btnParse";
             this.btnParse.Size = new System.Drawing.Size(58, 23);
             this.btnParse.TabIndex = 4;
@@ -848,7 +848,7 @@
             this.MinimumSize = new System.Drawing.Size(1000, 550);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bank Reconciliations  - Build(03/09/19)";
+            this.Text = "Bank Reconciliations  - Build(03/19/19)";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.menuStrip1.ResumeLayout(false);

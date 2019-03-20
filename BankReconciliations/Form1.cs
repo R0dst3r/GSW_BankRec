@@ -110,7 +110,8 @@ namespace BankReconciliations
             if (firstRun == true)
             {
                 // Set Cleared Balance to EndMonth of the month of CutOff Date
-                clearedBalance = (Decimal)bankRec_stmtsTableAdapter.GetClearedBalanceVF(bankAccount, dtpCutOffDate.Value.ToShortDateString());        // Will have to get from export of PASBR
+                var test = bankRec_stmtsTableAdapter.GetClearedBalanceVF(1112.02m, dtpCutOffDate.Value.ToShortDateString());
+                clearedBalance = test != null ? (decimal)test : 0.00m;        // Will have to get from export of PASBR
             }
 
             for (int x = 0; x < dgvBankRec.RowCount; x++)
@@ -412,7 +413,7 @@ namespace BankReconciliations
 
         private void UpdateStatementBalance()
         {
-            statementBalance = Decimal.Parse(tboxStatementBalance.Text.Replace("$", String.Empty));
+            statementBalance = !String.IsNullOrEmpty(tboxStatementBalance.Text) ? Decimal.Parse(tboxStatementBalance.Text.Replace("$", String.Empty)) : 0.00m;
             tboxStatementBalance.Text = String.Format("{0:$###,##0.00}", statementBalance);
         }
 
@@ -445,20 +446,21 @@ namespace BankReconciliations
 
         private void btnParse_Click(object sender, EventArgs e)
         {
-            try
+            cutOffDate = dtpCutOffDate.Value.ToShortDateString();
+            this.bankRec_stmtsTableAdapter.Fill(this.excaliburDataSet.BankRec_stmts, 1112.02m, cutOffDate);
+
+            if (excaliburDataSet.Tables[0].Rows.Count > 0)
             {
-                cutOffDate = dtpCutOffDate.Value.ToShortDateString();
-                this.bankRec_stmtsTableAdapter.Fill(this.excaliburDataSet.BankRec_stmts, bankAccount, cutOffDate);
-                difference = Decimal.Parse(tboxStatementBalance.Text.Replace("$", String.Empty));
+                difference = !String.IsNullOrEmpty(tboxStatementBalance.Text) ? Decimal.Parse(tboxStatementBalance.Text.Replace("$", String.Empty)) : 0.00m;
                 //bankRecTableAdapter.Fill(excaliburDataSet1.BankRec, cutOffDate);
                 dsBankRecords.EnforceConstraints = false;
-                this.bankRecTableAdapter2.Fill(this.dsBankRecords.BankRec, cutOffDate, bankAccount);
+                this.bankRecTableAdapter2.Fill(this.dsBankRecords.BankRec, cutOffDate, 1112.02m);
 
                 CalcCredsDebts();
                 UpdateStatementBalance();
                 firstRun = false;
             }
-            catch
+            else
             {
                 MessageBox.Show("It appears the data was not put in the database for the statement information. Please check!");
                 PrepBankStatementForm();
@@ -582,8 +584,8 @@ namespace BankReconciliations
         private void PrepBankStatementForm()
         {
             BankStatementForm bsf = new BankStatementForm();
-            bsf.cutOffDate = cutOffDate;
-            bsf.bankAcct = bankAccount;
+            bsf.cutOffDate = dtpCutOffDate.Value.ToShortDateString();
+            bsf.bankAcct = 1112.02m;
             bsf.bankInfo = bank;
             bsf.tboxEndofMonthDate.Text = dtpCutOffDate.Text;
 
@@ -606,12 +608,63 @@ namespace BankReconciliations
         {
             if (MessageBox.Show("Are you sure you are ready to import data into SQL for processing?","Please Verify!",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
             {
-                FileInfo fi = new FileInfo($@"{Program.pathRoot}\versaform\vf\d8a\bankrec.d8a");
-                DateTime oldestAllowed = DateTime.Now.AddDays(-4);
-                if (fi.Exists && fi.LastWriteTime > oldestAllowed)
+                FileInfo fi = new FileInfo($@"{Program.pathRoot}\Versaform\SQL\BankRec\bankrec.sql");
+                if (fi.Exists)
                 {
                     MessageBox.Show("Data file found. Ready for processing...");
-                    Process.Start($@"{Program.pathRoot}\MSSQL\DTSX\Import BankRec Data Laptop.dtsx");
+                    StreamReader fs = new StreamReader(fi.FullName);
+                    StringBuilder errMsgs = new StringBuilder();
+                    errMsgs.AppendLine("The following records have formatting errors:");
+
+                    int count = 0;
+                    cnGSW.Open();
+                    while (!fs.EndOfStream)
+                    {
+                        string line = fs.ReadLine();
+                        if (!String.IsNullOrEmpty(line) && line.Length > 1)
+                        {
+                            string[] pt = fs.ReadLine().Split('|');
+                            string parsed = $"('{pt[1]}','{pt[2]}','{pt[3]}','{pt[4]}',{pt[5]},'{pt[6].Replace("'", "")}',{pt[7]},'{DateTime.Now.ToString("MM/dd/yyyy HH:mm")}',0,0)";
+                            string cmdText = $@"
+                                INSERT INTO [dbo].[BankRec]
+                                        ([BkAcct]
+                                        ,[JN]
+                                        ,[RefNum]
+                                        ,[RefDate]
+                                        ,[Cleared]
+                                        ,[Description]
+                                        ,[Amount]
+                                        ,[dateRecorded]
+                                        ,[Processed]
+                                        ,[UIClr])
+                                    VALUES
+                                {parsed}";
+
+                            try
+                            {
+                                using (SqlCommand cmd = new SqlCommand(cmdText, cnGSW))
+                                {
+                                    cmd.ExecuteNonQuery();
+                                    count++;
+                                }
+                            }
+                            catch
+                            {
+                                errMsgs.AppendLine(line);
+                            }
+
+                        }
+                    }
+                    fs.Close();
+                    cnGSW.Close();
+
+                    MessageBox.Show($"Data file ({count} lines) imported successfully.");
+
+                    if (errMsgs.Capacity > 1)
+                    {
+                        MessageBox.Show(errMsgs.ToString());
+                    }
+
                 }
                 else
                 {

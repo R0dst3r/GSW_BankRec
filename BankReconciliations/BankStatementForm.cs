@@ -12,7 +12,7 @@ namespace BankReconciliations
         }
 
         public string bankInfo = "";
-        public decimal bankAcct = 0.00M;
+        public decimal bankAcct = 1112.02M;
         public string cutOffDate = "";
 
         private void BankStatementForm_Shown(object sender, EventArgs e)
@@ -86,10 +86,10 @@ namespace BankReconciliations
         {
             dsBankStatements.EnforceConstraints = false;
             if (cutOffDate == "") { cutOffDate = DateTime.Now.ToShortDateString(); }
-            this.bankRec_stmtsTableAdapter.FillByLastFigures(this.dsBankStatements.BankRec_stmts,cutOffDate,bankAcct);
+            this.bankRec_stmtsTableAdapter.FillByLastFigures(this.dsBankStatements.BankRec_stmts,cutOffDate,1112.02m);
             try
             {
-                bankAcct = Decimal.Parse(dsBankStatements.BankRec_stmts.acctIDColumn.Table.Rows[0]["acctID"].ToString());
+                bankAcct = 1112.02m;
             }
             catch
             {
@@ -113,6 +113,7 @@ namespace BankReconciliations
             string bankFolder = "";
             if (bankAcct == 1112.02M) { bankFolder = "Centennial Bank"; }
             ofdLoadStatement.InitialDirectory = $@"{Program.pathRoot}\accounting\Financial Statements\{bankFolder}\";
+            //ofdLoadStatement.InitialDirectory = $@"\\diskstation\accounting\Financial Statements\{bankFolder}\";
             if (ofdLoadStatement.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 System.Diagnostics.Process.Start(ofdLoadStatement.FileName.ToString());
