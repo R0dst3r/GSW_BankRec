@@ -60,7 +60,7 @@ namespace BankReconciliations
             rvWorksheet.LocalReport.SetParameters(new ReportParameter[] { pCutOffDate });
 
             // TODO: This line of code loads data into the 'dsBankRecords.BankRec' table. You can move, or remove it, as needed.
-            this.BankRecTableAdapter.Fill(this.dsBankRecords.BankRec, cutOffDate, bankAccount);
+            this.BankRecTableAdapter.Fill(this.dsBankRecords.BankRec, cutOffDate, 1112.02m);
             this.rvWorksheet.RefreshReport();
         }
     }

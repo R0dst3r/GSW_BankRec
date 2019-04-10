@@ -87,21 +87,38 @@ namespace BankReconciliations
             dsBankStatements.EnforceConstraints = false;
             if (cutOffDate == "") { cutOffDate = DateTime.Now.ToShortDateString(); }
             this.bankRec_stmtsTableAdapter.FillByLastFigures(this.dsBankStatements.BankRec_stmts,cutOffDate,1112.02m);
-            try
-            {
-                bankAcct = 1112.02m;
-            }
-            catch
+
+            if (this.dsBankStatements.BankRec_stmts.Rows.Count < 1)
             {
                 MessageBox.Show("There was no data to load - please provide on the next pop-up.");
                 tboxEndofMonthDate.Text = cutOffDate;
                 tboxPrevBal.Text = String.Format("{0:$#,##0.00}", bankRec_stmtsTableAdapter.getPrevBalance());
                 decimal endMonthVF = 0.00M;
-                StreamReader sr = new StreamReader($@"{Program.pathRoot}\versaform\SQL\BankRec\ENDMONTH.TXT");
-                endMonthVF = Decimal.Parse(sr.ReadLine());
+
+                try
+                {
+                    StreamReader sr = new StreamReader($@"{Program.pathRoot}\versaform\SQL\BankRec\ENDMONTH.TXT");
+                    endMonthVF = Decimal.Parse(sr.ReadLine());
+                }
+                catch
+                {
+                    MessageBox.Show($@"Error: 
+Cannot find file ENDMONTH.TXT.
+
+Navigate to find file ENDMONTH.TXT, or 
+enter the end month value from VF manually.");
+
+                    OpenFileDialog ofd = new OpenFileDialog();
+                    ofd.InitialDirectory = @"C:\";
+                    if (ofd.ShowDialog() == DialogResult.OK)
+                    {
+                        StreamReader sr = new StreamReader(ofd.FileName);
+                        endMonthVF = Decimal.Parse(sr.ReadLine());
+                    }
+                }
+
                 tboxClearedBalanceVF.Text = String.Format("{0:$#,##0.00}", endMonthVF);
                 tboxCreditsCount.Focus();
-                //DialogResult = DialogResult.Abort;
             }
 
         }

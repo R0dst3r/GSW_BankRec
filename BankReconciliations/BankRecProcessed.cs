@@ -163,7 +163,7 @@ namespace BankReconciliations
 
         private void BankRecProcessed_Load(object sender, EventArgs e)
         {
-            this.BankRecTableAdapter.Fill(this.dsBankRecords.BankRec, cutOffDate, bankAccount);
+            this.BankRecTableAdapter.Fill(this.dsBankRecords.BankRec, cutOffDate, 1112.02m);
 
             ReportParameter pBank = new ReportParameter("Bank", bank);
             rvBankRecProcessed.LocalReport.SetParameters(new ReportParameter[] { pBank });

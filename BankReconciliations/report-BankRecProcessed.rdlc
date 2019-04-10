@@ -1442,8 +1442,8 @@
       </DefaultValue>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-	<ReportParameter Name = "Bank">
-	  <DataType>String</DataType>
+    <ReportParameter Name="Bank">
+      <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="Credits">

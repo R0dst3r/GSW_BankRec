@@ -446,13 +446,17 @@ namespace BankReconciliations
 
         private void btnParse_Click(object sender, EventArgs e)
         {
+            LoadData();
+        }
+
+        private void LoadData()
+        {
             cutOffDate = dtpCutOffDate.Value.ToShortDateString();
             this.bankRec_stmtsTableAdapter.Fill(this.excaliburDataSet.BankRec_stmts, 1112.02m, cutOffDate);
 
             if (excaliburDataSet.Tables[0].Rows.Count > 0)
             {
                 difference = !String.IsNullOrEmpty(tboxStatementBalance.Text) ? Decimal.Parse(tboxStatementBalance.Text.Replace("$", String.Empty)) : 0.00m;
-                //bankRecTableAdapter.Fill(excaliburDataSet1.BankRec, cutOffDate);
                 dsBankRecords.EnforceConstraints = false;
                 this.bankRecTableAdapter2.Fill(this.dsBankRecords.BankRec, cutOffDate, 1112.02m);
 
@@ -466,8 +470,6 @@ namespace BankReconciliations
                 PrepBankStatementForm();
             }
         }
-
-
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -596,9 +598,6 @@ namespace BankReconciliations
 
         }
 
-
-
-
         private void tsmiRevertFromArchive_Click(object sender, EventArgs e)
         {
 
@@ -606,7 +605,9 @@ namespace BankReconciliations
 
         private void tsmiImportVFtoSQL_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you are ready to import data into SQL for processing?","Please Verify!",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
+            if (MessageBox.Show(@"Are you sure you are ready to import data into SQL for processing?
+
+This WILL completely replace any data already in the database.","Please Verify!",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
             {
                 FileInfo fi = new FileInfo($@"{Program.pathRoot}\Versaform\SQL\BankRec\bankrec.sql");
                 if (fi.Exists)
@@ -615,17 +616,23 @@ namespace BankReconciliations
                     StreamReader fs = new StreamReader(fi.FullName);
                     StringBuilder errMsgs = new StringBuilder();
                     errMsgs.AppendLine("The following records have formatting errors:");
-
+                    int errCount = 0;
                     int count = 0;
                     cnGSW.Open();
+                    string cmdText = "DELETE FROM [dbo].[bankrec]";
+                    using (SqlCommand cmd = new SqlCommand(cmdText, cnGSW))
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+
                     while (!fs.EndOfStream)
                     {
                         string line = fs.ReadLine();
                         if (!String.IsNullOrEmpty(line) && line.Length > 1)
                         {
-                            string[] pt = fs.ReadLine().Split('|');
+                            string[] pt = line.Split('|');
                             string parsed = $"('{pt[1]}','{pt[2]}','{pt[3]}','{pt[4]}',{pt[5]},'{pt[6].Replace("'", "")}',{pt[7]},'{DateTime.Now.ToString("MM/dd/yyyy HH:mm")}',0,0)";
-                            string cmdText = $@"
+                             cmdText = $@"
                                 INSERT INTO [dbo].[BankRec]
                                         ([BkAcct]
                                         ,[JN]
@@ -651,6 +658,7 @@ namespace BankReconciliations
                             catch
                             {
                                 errMsgs.AppendLine(line);
+                                errCount++;
                             }
 
                         }
@@ -660,11 +668,12 @@ namespace BankReconciliations
 
                     MessageBox.Show($"Data file ({count} lines) imported successfully.");
 
-                    if (errMsgs.Capacity > 1)
+                    if (errCount > 0)
                     {
                         MessageBox.Show(errMsgs.ToString());
                     }
 
+                    LoadData();
                 }
                 else
                 {

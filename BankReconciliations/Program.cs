@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 //using System.Linq;
 //using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -9,7 +10,9 @@ namespace BankReconciliations
 
     static class Program
     {
+        // Determine pathRoot
         public static string pathRoot = @"\\gsw.local\data";
+        public static string pathRootOld = @"\\diskstation";
 
         /// <summary>
         /// The main entry point for the application.
